@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kategori Hukum / JEP Legal</title>
+<style>
+a{color:inherit}
+
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#080808;color:#eee;font-family:Inter,Arial,sans-serif}
+body{background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:42px 42px}
+nav{height:76px;padding:0 6vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.09);background:rgba(8,8,8,.82);backdrop-filter:blur(12px);position:sticky;top:0;z-index:10}
+.brand{font-size:14px;font-weight:700;letter-spacing:.16em}.nav-links{display:flex;gap:8px}.nav-links a{color:#aaa;text-decoration:none;border:1px solid rgba(255,255,255,.12);padding:10px 14px;font-size:10px;letter-spacing:.12em;transition:.2s}.nav-links a:hover{background:#eee;color:#080808;border-color:#eee}
+main{padding:55px 6vw 90px;max-width:1100px;margin:auto}.back{color:#666;text-decoration:none;font-size:10px;letter-spacing:.14em;text-transform:uppercase}.eyebrow{font-size:10px;letter-spacing:.18em;color:#666;text-transform:uppercase;margin-top:38px;margin-bottom:14px}h1{font-size:clamp(44px,7vw,82px);line-height:.95;letter-spacing:-.055em;margin:0;font-weight:600}.intro{max-width:760px;color:#888;line-height:1.8;font-size:14px;margin:28px 0 42px}
+.panel{border:1px solid rgba(255,255,255,.12);padding:25px}.panel h2{font-size:16px;font-weight:500;margin:0 0 14px}.panel p{font-size:12px;color:#777;line-height:1.8;margin:0}.tag{display:inline-block;margin-top:18px;border:1px solid rgba(255,255,255,.1);padding:7px 9px;color:#555;font-size:9px;letter-spacing:.12em}
+@media(max-width:700px){.nav-links a:nth-child(n+3){display:none}}
+</style>
+</head>
+<body>
+<nav><div class="brand">JEP / LEGAL</div><div class="nav-links"><a href="index.html">HOME</a><a href="mindmap.html">MIND MAP</a><a href="#">NOTES</a><a href="#">RESEARCH</a></div></nav>
+<main>
+  <a class="back" id="backLink" href="cabang-hukum.html">← Back to Cabang Hukum</a>
+  <div class="eyebrow" id="eyebrow">03 · Kategori</div>
+  <h1 id="title">Kategori.</h1>
+  <p class="intro" id="intro">Index awal untuk kategori hukum.</p>
+  <section class="panel">
+    <h2 id="heading">Materi akan dikembangkan di sini.</h2>
+    <p id="body">Halaman ini adalah placeholder terstruktur agar navigasi Cabang Hukum sudah langsung masuk ke kategori spesifik. Konten mendalam berikutnya akan dihubungkan ke konsep, peraturan, putusan, kasus, dan related topics.</p>
+    <span class="tag" id="tag">CATEGORY INDEX</span>
+  </section>
+</main>
+<script>
+const categories={
+  pidana:{title:'Pidana.',label:'CRIMINAL',heading:'Hukum Pidana',intro:'Index awal untuk kategori Hukum Pidana.',body:'Ruang pengembangan: tindak pidana, unsur tindak pidana, pertanggungjawaban pidana, pemidanaan, serta hubungan dengan hukum acara pidana.'},
+  'pidana-khusus':{title:'Pidana Khusus.',label:'SPECIAL CRIMINAL',heading:'Hukum Pidana Khusus',intro:'Index awal untuk kategori Hukum Pidana Khusus.',body:'Ruang pengembangan: tindak pidana yang memiliki karakteristik dan pengaturan khusus melalui ketentuan sektoral, beserta konsep, lembaga, dan mekanismenya.'},
+  htn:{title:'HTN.',label:'CONSTITUTIONAL',heading:'Hukum Tata Negara',intro:'Index awal untuk kategori HTN.',body:'Ruang pengembangan: konstitusi, lembaga negara, pembagian kekuasaan, kewenangan, hubungan antarorgan negara, dan struktur ketatanegaraan.'}
+};
+const params=new URLSearchParams(location.search);
+const key=params.get('category');
+const from=params.get('from');
+if(from==='hukum-privat'){document.getElementById('backLink').href='hukum-privat.html';document.getElementById('backLink').textContent='← Back to Hukum Privat';}
+const data=categories[key]||{title:'Kategori.',label:'CATEGORY INDEX',heading:'Kategori belum ditentukan',intro:'Index awal untuk kategori hukum.',body:'Kategori ini belum memiliki materi khusus. Struktur halaman sudah disiapkan untuk pengembangan berikutnya.'};
+document.title=data.heading+' / JEP Legal';
+document.getElementById('eyebrow').textContent='03 · '+data.label;
+document.getElementById('title').textContent=data.title;
+document.getElementById('heading').textContent=data.heading;
+document.getElementById('intro').textContent=data.intro;
+document.getElementById('body').textContent=data.body;
+document.getElementById('tag').textContent=data.label;
+</script>
+</body>
+</html>

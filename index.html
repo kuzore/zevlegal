@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JEP / LEGAL</title>
+  <style>
+a{color:inherit}
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: #080808;
+      color: #f2f2f2;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      overflow-x: hidden;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 42px 42px;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at 70% 45%, rgba(255,255,255,.08), transparent 30%);
+    }
+
+    nav {
+      height: 76px;
+      padding: 0 6vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,.09);
+      position: relative;
+      z-index: 2;
+      background: rgba(8,8,8,.75);
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .16em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+    }
+
+    .nav-links button,
+    .hero-buttons button {
+      border: 1px solid rgba(255,255,255,.16);
+      background: transparent;
+      color: #ddd;
+      padding: 11px 16px;
+      font-size: 11px;
+      letter-spacing: .12em;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .nav-links button:hover,
+    .hero-buttons button:hover {
+      background: #f2f2f2;
+      color: #080808;
+      border-color: #f2f2f2;
+    }
+
+    main {
+      min-height: calc(100vh - 76px);
+      padding: 0 6vw;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero {
+      width: 100%;
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 8vw;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: #888;
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(48px, 7vw, 92px);
+      line-height: .95;
+      letter-spacing: -.055em;
+      font-weight: 600;
+    }
+
+    .description {
+      margin-top: 30px;
+      max-width: 560px;
+      color: #999;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 34px;
+    }
+
+    .hero-buttons button:first-child {
+      background: #f2f2f2;
+      color: #080808;
+      border-color: #f2f2f2;
+    }
+
+    .visual {
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .circle {
+      width: min(32vw, 360px);
+      aspect-ratio: 1;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .circle::before,
+    .circle::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 50%;
+    }
+
+    .circle::before { inset: 15%; }
+    .circle::after { inset: 32%; }
+
+    .dot {
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      background: #fff;
+      border-radius: 50%;
+      top: 13%;
+      right: 21%;
+      box-shadow: 0 0 30px rgba(255,255,255,.5);
+    }
+
+    .visual-label {
+      position: absolute;
+      bottom: 22px;
+      right: 0;
+      color: #555;
+      font-size: 10px;
+      letter-spacing: .16em;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 22px;
+      left: 6vw;
+      right: 6vw;
+      display: flex;
+      justify-content: space-between;
+      color: #555;
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+
+
+    .home-search {
+      margin-top: 34px;
+      max-width: 700px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(8,8,8,.72);
+      padding: 9px;
+    }
+    .home-search-label {
+      color: #555;
+      font-size: 9px;
+      letter-spacing: .18em;
+      padding: 7px 11px 5px;
+    }
+    .home-search-row { display:flex; gap:8px; }
+    .home-search input {
+      flex:1; min-width:0; border:0; outline:0; background:transparent;
+      color:#eee; padding:14px 11px; font-size:14px; font-family:inherit;
+    }
+    .home-search button {
+      border:1px solid #eee; background:#eee; color:#080808;
+      padding:0 19px; font-size:10px; letter-spacing:.13em; cursor:pointer;
+    }
+    .home-search button:hover { background:#fff; }
+    .search-hint { margin-top:9px; color:#555; font-size:10px; line-height:1.6; max-width:650px; }
+
+    @media (max-width: 800px) {
+      nav { padding: 0 5vw; }
+      .nav-links button { padding: 9px 10px; }
+      main { padding: 60px 5vw 100px; }
+      .hero { grid-template-columns: 1fr; }
+      .visual { display: none; }
+      .home-search-row { display:block; }
+      .home-search button { width:100%; height:44px; margin-top:4px; }
+      h1 { font-size: clamp(48px, 13vw, 72px); }
+      footer { left: 5vw; right: 5vw; }
+    }
+
+    .nav-links a, .hero-link {
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid #1a1a1a;
+      padding: 9px 10px;
+      font: inherit;
+      letter-spacing: .08em;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+    .nav-links a:hover, .hero-link:hover {
+      background: #e8e8e8;
+      color: #090909;
+    }
+    .hero-link {
+      padding: 14px 18px;
+      background: #e8e8e8;
+      color: #090909;
+      border-color: #e8e8e8;
+    }
+    .hero-link.secondary {
+      background: transparent;
+      color: #888;
+      border-color: #1a1a1a;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="brand">JEP / LEGAL</div>
+
+    <!-- EDIT THESE BUTTONS LATER -->
+    <div class="nav-links">
+      <a href="mindmap.html">MIND MAP</a>
+      <a href="search.html">SEARCH</a>
+      <a href="notes.html">NOTES</a>
+      <a href="research.html">RESEARCH</a>
+      <a href="about.html">ABOUT</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">personal legal workspace · 2026</div>
+
+        <h1>Thinking about law,<br>in my own way.</h1>
+
+        <p class="description">
+          A place to map ideas, write notes, connect concepts,
+          and keep track of everything I learn about law.
+        </p>
+
+        <form class="home-search" id="homeSearch">
+          <div class="home-search-label">START FROM A QUESTION</div>
+          <div class="home-search-row">
+            <input id="homeQuery" autocomplete="off" placeholder="orang umur 17 tahun membuat perjanjian sendiri..." />
+            <button type="submit">SEARCH</button>
+          </div>
+        </form>
+        <div class="search-hint">Try a fact, concept, article, or legal problem. JEP will route it into the knowledge graph.</div>
+
+        <div class="hero-buttons">
+          <a class="hero-link" href="mindmap.html">ENTER THE MAP</a>
+          <a class="hero-link secondary" href="search.html">OPEN SEARCH</a>
+        </div>
+      </div>
+
+      <div class="visual">
+        <div class="circle">
+          <div class="dot"></div>
+        </div>
+        <div class="visual-label">law · thought · research</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>JEP / LEGAL</span>
+    <span>system online</span>
+  </footer>
+
+
+
+
+<script>
+document.getElementById('homeSearch').addEventListener('submit', function(e){
+  e.preventDefault();
+  const q=document.getElementById('homeQuery').value.trim();
+  if(q) window.location.href='search.html?q='+encodeURIComponent(q);
+});
+</script>
+</body>
+</html>

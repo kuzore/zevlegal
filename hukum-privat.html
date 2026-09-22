@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hukum Privat · Cabang Hukum / JEP Legal</title>
+<style>
+a{color:inherit}
+
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#080808;color:#eee;font-family:Inter,Arial,sans-serif}
+body{background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:42px 42px}
+nav{height:76px;padding:0 6vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.09);background:rgba(8,8,8,.86);backdrop-filter:blur(12px);position:sticky;top:0;z-index:20}
+.brand{font-size:14px;font-weight:700;letter-spacing:.16em}.nav-links{display:flex;gap:8px}
+.nav-links a{color:#aaa;text-decoration:none;border:1px solid rgba(255,255,255,.12);padding:10px 14px;font-size:10px;letter-spacing:.12em;transition:.2s}
+.nav-links a:hover{background:#eee;color:#080808;border-color:#eee}
+main{padding:55px 6vw 100px;max-width:1450px;margin:auto}
+.back{color:#666;text-decoration:none;font-size:10px;letter-spacing:.14em;text-transform:uppercase}.back:hover{color:#eee}
+.eyebrow{font-size:10px;letter-spacing:.18em;color:#666;text-transform:uppercase;margin-top:38px;margin-bottom:14px}
+h1{font-size:clamp(44px,7vw,88px);line-height:.9;letter-spacing:-.055em;margin:0;font-weight:600}
+.intro{max-width:760px;color:#888;line-height:1.8;font-size:14px;margin:28px 0 42px}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filter{border:1px solid #202020;background:#0b0b0b;color:#777;padding:9px 12px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.filter.active,.filter:hover{border-color:#aaa;color:#eee}
+.structure{border:1px solid #191919;background:#ffffff02}
+.structure-head{padding:22px 24px;border-bottom:1px solid #191919;display:flex;justify-content:space-between;align-items:center}
+.structure-head strong{font-size:12px;letter-spacing:.12em}.structure-head span{font-size:10px;color:#555}
+.field{border-bottom:1px solid #151515}.field:last-child{border-bottom:0}
+.field-head{display:grid;grid-template-columns:48px 1fr auto;gap:16px;align-items:center;padding:22px 24px;cursor:pointer}
+.field-head:hover{background:#ffffff04}
+.num{font-size:9px;color:#555;letter-spacing:.16em}.field h2{font-size:16px;font-weight:500;margin:0 0 6px}.field p{font-size:11px;color:#666;margin:0;line-height:1.5}.plus{font-size:18px;color:#555}
+.field-body{display:none;padding:0 24px 26px 88px}
+.field.open .field-body{display:block}
+.layer{margin-top:14px;border-left:1px solid #242424;padding-left:18px}
+.layer-title{font-size:9px;color:#555;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+.items{display:flex;flex-wrap:wrap;gap:7px}
+.item{border:1px solid #202020;background:#0b0b0b;padding:9px 11px;font-size:10px;color:#aaa;cursor:pointer}
+.item:hover{border-color:#888;color:#eee}
+.item small{display:block;color:#555;margin-top:3px;font-size:8px}
+.empty{color:#555;font-size:10px;padding:10px 0}
+.note{padding:18px 24px;color:#555;font-size:10px;line-height:1.7;border-top:1px solid #151515}
+@media(max-width:700px){
+  .nav-links a:nth-child(n+3){display:none}
+  .field-head{grid-template-columns:34px 1fr auto;padding:20px 16px}
+  .field-body{padding:0 16px 24px 50px}
+  .structure-head{padding:18px 16px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="brand">JEP / LEGAL</div>
+  <div class="nav-links">
+    <a href="index.html">HOME</a>
+    <a href="mindmap.html">MIND MAP</a>
+    <a href="#">NOTES</a>
+    <a href="#">RESEARCH</a>
+  </div>
+</nav>
+
+<main>
+  <a class="back" href="cabang-hukum.html">← Back to Cabang Hukum</a>
+
+  <div class="eyebrow">03.01 · Cabang Hukum · Private Law</div>
+  <h1>Hukum Privat.</h1>
+
+  <p class="intro">
+    Bukan sekadar daftar mata kuliah. Setiap bidang hukum dipecah menjadi
+    <b>konsep → doktrin → peraturan → putusan → kasus</b>, sehingga satu
+    konsep nantinya dapat terhubung ke berbagai sumber dan kasus.
+  </p>
+
+  <div class="toolbar">
+    <button class="filter active" onclick="filterFields('all',this)">ALL</button>
+    <button class="filter" onclick="filterFields('perdata',this)">PERDATA</button>
+    <button class="filter" onclick="filterFields('business',this)">BUSINESS</button>
+    <button class="filter" onclick="filterFields('contract',this)">CONTRACT</button>
+    <button class="filter" onclick="filterFields('property',this)">PROPERTY</button>
+  </div>
+
+  <section class="structure">
+    <div class="structure-head">
+      <strong>HUKUM PRIVAT</strong>
+      <span>FIELD → CONCEPT → SOURCES → CASES</span>
+    </div>
+
+    <article id="keperdataan" class="field" data-category="perdata">
+      <div class="field-head" onclick="toggle(this.parentElement)">
+        <div class="num">01</div><div><h2>Hukum Perdata</h2><p>Fondasi hubungan hukum antar subjek privat.</p></div><div class="plus">+</div>
+      </div>
+      <div class="field-body">
+        <div class="layer"><div class="layer-title">Konsep</div><div class="items">
+          <div class="item">Subjek Hukum</div><div class="item">Objek Hukum</div><div class="item">Hukum Orang</div><div class="item">Hukum Benda</div><div class="item">Perikatan</div><div class="item">Perjanjian</div><div class="item">Wanprestasi</div><div class="item">PMH</div><div class="item">Hukum Waris</div>
+        </div></div>
+        <div class="layer"><div class="layer-title">Doktrin</div><div class="items"><div class="item">Teori Hukum Perdata</div><div class="item">Pendapat Ahli</div></div></div>
+        <div class="layer"><div class="layer-title">Peraturan</div><div class="items"><div class="item">KUHPerdata</div><div class="item">UU terkait</div></div></div>
+        <div class="layer"><div class="layer-title">Putusan</div><div class="items"><div class="item">Putusan Pengadilan</div></div></div>
+        <div class="layer"><div class="layer-title">Kasus</div><div class="items"><div class="item">Case Library</div></div></div>
+      </div>
+    </article>
+
+    <article id="business" class="field" data-category="business">
+      <div class="field-head" onclick="toggle(this.parentElement)">
+        <div class="num">02</div><div><h2>Corporate Law</h2><p>Perseroan, organ perusahaan, saham, governance, dan transaksi korporasi.</p></div><div class="plus">+</div>
+      </div>
+      <div class="field-body">
+        <div class="layer"><div class="layer-title">Konsep</div><div class="items">
+          <div class="item">Perseroan Terbatas</div><div class="item">RUPS</div><div class="item">Direksi</div><div class="item">Komisaris</div><div class="item">Saham</div><div class="item">Corporate Governance</div><div class="item">Fiduciary Duty</div><div class="item">Conflict of Interest</div><div class="item">Self-Dealing</div><div class="item">Corporate Action</div><div class="item">M&amp;A</div>
+        </div></div>
+        <div class="layer"><div class="layer-title">Doktrin</div><div class="items"><div class="item">Duty of Loyalty</div><div class="item">Duty of Care</div><div class="item">Business Judgment Rule</div><div class="item">Separate Legal Personality</div><div class="item">Piercing the Corporate Veil</div></div></div>
+        <div class="layer"><div class="layer-title">Peraturan</div><div class="items"><div class="item">UUPT</div><div class="item">POJK</div><div class="item">Peraturan Pasar Modal</div></div></div>
+        <div class="layer"><div class="layer-title">Putusan</div><div class="items"><div class="item">Corporate Disputes</div><div class="item">Shareholder Disputes</div></div></div>
+        <div class="layer"><div class="layer-title">Kasus</div><div class="items"><div class="item">M&amp;A Cases</div><div class="item">Conflict of Interest Cases</div></div></div>
+      </div>
+    </article>
+
+    <article id="contract" class="field" data-category="contract">
+      <div class="field-head" onclick="toggle(this.parentElement)">
+        <div class="num">03</div><div><h2>Hukum Kontrak</h2><p>Hubungan kontraktual dari pembentukan sampai pengakhiran.</p></div><div class="plus">+</div>
+      </div>
+      <div class="field-body">
+        <div class="layer"><div class="layer-title">Konsep</div><div class="items"><div class="item">Asas Kontrak</div><div class="item">Syarat Sah</div><div class="item">Offer &amp; Acceptance</div><div class="item">Prestasi</div><div class="item">Wanprestasi</div><div class="item">Termination</div><div class="item">Remedies</div><div class="item">Dispute Resolution</div></div></div>
+        <div class="layer"><div class="layer-title">Doktrin</div><div class="items"><div class="item">Freedom of Contract</div><div class="item">Good Faith</div><div class="item">Pacta Sunt Servanda</div></div></div>
+        <div class="layer"><div class="layer-title">Peraturan</div><div class="items"><div class="item">KUHPerdata</div><div class="item">UU sektoral</div></div></div>
+        <div class="layer"><div class="layer-title">Putusan</div><div class="items"><div class="item">Contract Disputes</div></div></div>
+        <div class="layer"><div class="layer-title">Kasus</div><div class="items"><div class="item">Breach of Contract</div><div class="item">Contract Interpretation</div></div></div>
+      </div>
+    </article>
+
+    <article id="property" class="field" data-category="property">
+      <div class="field-head" onclick="toggle(this.parentElement)">
+        <div class="num">04</div><div><h2>Hukum Kekayaan / Property</h2><p>Benda, hak kebendaan, jaminan, dan transaksi kekayaan.</p></div><div class="plus">+</div>
+      </div>
+      <div class="field-body">
+        <div class="layer"><div class="layer-title">Konsep</div><div class="items"><div class="item">Hak Milik</div><div class="item">Hak Kebendaan</div><div class="item">Jaminan</div><div class="item">Fidusia</div><div class="item">Hak Tanggungan</div><div class="item">Gadai</div><div class="item">Transaksi Properti</div></div></div>
+        <div class="layer"><div class="layer-title">Doktrin</div><div class="items"><div class="item">Property Rights</div><div class="item">Security Interests</div></div></div>
+        <div class="layer"><div class="layer-title">Peraturan</div><div class="items"><div class="item">KUHPerdata</div><div class="item">UU Hak Tanggungan</div><div class="item">UU Fidusia</div></div></div>
+        <div class="layer"><div class="layer-title">Putusan</div><div class="items"><div class="item">Property Disputes</div></div></div>
+        <div class="layer"><div class="layer-title">Kasus</div><div class="items"><div class="item">Jaminan</div><div class="item">Sengketa Properti</div></div></div>
+      </div>
+    </article>
+
+    <article class="field" data-category="perdata">
+      <div class="field-head" onclick="toggle(this.parentElement)">
+        <div class="num">05</div><div><h2>Keluarga &amp; Waris</h2><p>Perkawinan, anak, pengangkatan anak, waris, hibah, dan wasiat.</p></div><div class="plus">+</div>
+      </div>
+      <div class="field-body">
+        <div class="layer"><div class="layer-title">Konsep</div><div class="items"><div class="item">Perkawinan</div><div class="item">Perceraian</div><div class="item">Anak</div><div class="item">Adopsi</div><div class="item">Ahli Waris</div><div class="item">Legitieme Portie</div><div class="item">Hibah</div><div class="item">Wasiat</div></div></div>
+        <div class="layer"><div class="layer-title">Doktrin</div><div class="items"><div class="item">Teori Waris</div><div class="item">Pendapat Ahli</div></div></div>
+        <div class="layer"><div class="layer-title">Peraturan</div><div class="items"><div class="item">KUHPerdata</div><div class="item">UU Perkawinan</div><div class="item">Peraturan Adopsi</div></div></div>
+        <div class="layer"><div class="layer-title">Putusan</div><div class="items"><div class="item">Sengketa Waris</div><div class="item">Legitieme Portie</div></div></div>
+        <div class="layer"><div class="layer-title">Kasus</div><div class="items"><div class="item">Waris Anak Angkat</div><div class="item">Wasiat</div></div></div>
+      </div>
+    </article>
+
+    <article class="field" data-category="property">
+      <div class="field-head" onclick="toggle(this.parentElement)">
+        <div class="num">06</div><div><h2>Hak Kekayaan Intelektual</h2><p>Hak atas karya, invensi, tanda, dan kekayaan intelektual.</p></div><div class="plus">+</div>
+      </div>
+      <div class="field-body">
+        <div class="layer"><div class="layer-title">Konsep</div><div class="items"><div class="item">Hak Cipta</div><div class="item">Paten</div><div class="item">Merek</div><div class="item">Desain Industri</div><div class="item">Rahasia Dagang</div></div></div>
+        <div class="layer"><div class="layer-title">Doktrin</div><div class="items"><div class="item">Intellectual Property Rights</div><div class="item">Infringement</div></div></div>
+        <div class="layer"><div class="layer-title">Peraturan</div><div class="items"><div class="item">UU Hak Cipta</div><div class="item">UU Paten</div><div class="item">UU Merek</div></div></div>
+        <div class="layer"><div class="layer-title">Putusan</div><div class="items"><div class="item">IP Disputes</div></div></div>
+        <div class="layer"><div class="layer-title">Kasus</div><div class="items"><div class="item">Trademark Cases</div><div class="item">Copyright Cases</div></div></div>
+      </div>
+    </article>
+
+    <article class="field" data-category="business">
+      <div class="field-head" onclick="toggle(this.parentElement)">
+        <div class="num">07</div><div><h2>Hukum Dagang</h2><p>Perdagangan, pengangkutan, asuransi, surat berharga, kepailitan, dan PKPU.</p></div><div class="plus">+</div>
+      </div>
+      <div class="field-body">
+        <div class="layer"><div class="layer-title">Konsep</div><div class="items"><div class="item">Perdagangan</div><div class="item">Perusahaan</div><div class="item">Surat Berharga</div><div class="item">Pengangkutan</div><div class="item">Asuransi</div><div class="item">Kepailitan</div><div class="item">PKPU</div></div></div>
+        <div class="layer"><div class="layer-title">Doktrin</div><div class="items"><div class="item">Commercial Law</div><div class="item">Insolvency Principles</div></div></div>
+        <div class="layer"><div class="layer-title">Peraturan</div><div class="items"><div class="item">KUHD</div><div class="item">UU Kepailitan</div><div class="item">UU sektoral</div></div></div>
+        <div class="layer"><div class="layer-title">Putusan</div><div class="items"><div class="item">Commercial Disputes</div><div class="item">Bankruptcy Cases</div></div></div>
+        <div class="layer"><div class="layer-title">Kasus</div><div class="items"><div class="item">PKPU</div><div class="item">Insolvency</div></div></div>
+      </div>
+    </article>
+
+    <article class="field" data-category="perdata">
+      <div class="field-head" onclick="toggle(this.parentElement)">
+        <div class="num">08</div><div><h2>Hukum Konsumen</h2><p>Hubungan hukum antara konsumen dan pelaku usaha.</p></div><div class="plus">+</div>
+      </div>
+      <div class="field-body">
+        <div class="layer"><div class="layer-title">Konsep</div><div class="items"><div class="item">Hak Konsumen</div><div class="item">Kewajiban Pelaku Usaha</div><div class="item">Klausula Baku</div><div class="item">Product Liability</div><div class="item">Sengketa Konsumen</div></div></div>
+        <div class="layer"><div class="layer-title">Doktrin</div><div class="items"><div class="item">Consumer Protection Principles</div></div></div>
+        <div class="layer"><div class="layer-title">Peraturan</div><div class="items"><div class="item">UU Perlindungan Konsumen</div><div class="item">Peraturan sektoral</div></div></div>
+        <div class="layer"><div class="layer-title">Putusan</div><div class="items"><div class="item">Consumer Disputes</div></div></div>
+        <div class="layer"><div class="layer-title">Kasus</div><div class="items"><div class="item">Product Liability</div><div class="item">Standard Terms</div></div></div>
+      </div>
+    </article>
+
+    <article class="field" data-category="perdata">
+      <div class="field-head" onclick="toggle(this.parentElement)">
+        <div class="num">09</div><div><h2>Hukum Perdata Internasional</h2><p>Hubungan privat yang mengandung unsur asing.</p></div><div class="plus">+</div>
+      </div>
+      <div class="field-body">
+        <div class="layer"><div class="layer-title">Konsep</div><div class="items"><div class="item">Pilihan Hukum</div><div class="item">Pilihan Forum</div><div class="item">Status Personal</div><div class="item">Kontrak Internasional</div><div class="item">Putusan Asing</div></div></div>
+        <div class="layer"><div class="layer-title">Doktrin</div><div class="items"><div class="item">Conflict of Laws</div><div class="item">Connecting Factors</div></div></div>
+        <div class="layer"><div class="layer-title">Peraturan</div><div class="items"><div class="item">Ketentuan Nasional</div><div class="item">Traktat/Konvensi terkait</div></div></div>
+        <div class="layer"><div class="layer-title">Putusan</div><div class="items"><div class="item">Cross-border Disputes</div></div></div>
+        <div class="layer"><div class="layer-title">Kasus</div><div class="items"><div class="item">International Contract</div></div></div>
+      </div>
+    </article>
+
+    <article class="field" data-category="business">
+      <div class="field-head" onclick="toggle(this.parentElement)">
+        <div class="num">10</div><div><h2>Bidang Privat Lintas Sektor</h2><p>Bidang privat yang beririsan kuat dengan regulasi publik.</p></div><div class="plus">+</div>
+      </div>
+      <div class="field-body">
+        <div class="layer"><div class="layer-title">Konsep</div><div class="items"><div class="item">Ketenagakerjaan</div><div class="item">Perbankan</div><div class="item">Pasar Modal</div><div class="item">Teknologi &amp; Transaksi Digital</div></div></div>
+        <div class="layer"><div class="layer-title">Doktrin</div><div class="items"><div class="item">Teori &amp; Pendapat Ahli</div></div></div>
+        <div class="layer"><div class="layer-title">Peraturan</div><div class="items"><div class="item">UU sektoral</div><div class="item">POJK / regulasi terkait</div></div></div>
+        <div class="layer"><div class="layer-title">Putusan</div><div class="items"><div class="item">Sector Disputes</div></div></div>
+        <div class="layer"><div class="layer-title">Kasus</div><div class="items"><div class="item">Digital Transactions</div><div class="item">Banking Disputes</div></div></div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="note">
+    Struktur ini sengaja dibuat sebagai template universal: <b>Bidang → Konsep → Doktrin/Peraturan/Putusan → Kasus.</b>
+    Nantinya item seperti “Fiduciary Duty” dapat menjadi node sendiri dan memiliki hubungan ke UUPT,
+    doktrin, putusan, dan kasus tanpa harus mengulang kontennya.
+  </div>
+</section>
+</main>
+
+<script>
+function toggle(field){
+  field.classList.toggle('open');
+  field.querySelector('.plus').textContent=field.classList.contains('open')?'−':'+';
+}
+function filterFields(category,button){
+  document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));
+  button.classList.add('active');
+  document.querySelectorAll('.field').forEach(field=>{
+    field.style.display=(category==='all'||field.dataset.category===category)?'block':'none';
+  });
+}
+</script>
+</body>
+</html>

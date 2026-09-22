@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mind Map / JEP Legal</title>
+<style>
+a{color:inherit}
+
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#080808;color:#eee;font-family:Inter,Arial,sans-serif}
+body{
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:42px 42px;
+}
+nav{
+  height:76px;padding:0 6vw;display:flex;align-items:center;
+  justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.09);
+  background:rgba(8,8,8,.82);backdrop-filter:blur(12px);
+  position:sticky;top:0;z-index:10
+}
+.brand{font-size:14px;font-weight:700;letter-spacing:.16em}
+.nav-links{display:flex;gap:8px}
+.nav-links a{
+  color:#aaa;text-decoration:none;border:1px solid rgba(255,255,255,.12);
+  padding:10px 14px;font-size:10px;letter-spacing:.12em;transition:.2s
+}
+.nav-links a:hover{background:#eee;color:#080808;border-color:#eee}
+
+main{padding:55px 6vw 80px;max-width:1500px;margin:auto}
+.header{display:flex;justify-content:space-between;align-items:end;margin-bottom:35px}
+.eyebrow{font-size:10px;letter-spacing:.18em;color:#666;text-transform:uppercase;margin-bottom:14px}
+h1{font-size:clamp(42px,6vw,78px);line-height:.95;letter-spacing:-.05em;margin:0;font-weight:600}
+.subtitle{color:#777;max-width:460px;line-height:1.7;font-size:13px}
+
+.map{
+  position:relative;
+  height:700px;
+  border:1px solid rgba(255,255,255,.1);
+  background:rgba(255,255,255,.012);
+  overflow:hidden;
+}
+.map svg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:1;
+}
+.map line{
+  stroke:rgba(255,255,255,.14);
+  stroke-width:1;
+}
+
+.center{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:150px;height:150px;
+  border:1px solid rgba(255,255,255,.38);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:#080808;
+  z-index:3;
+}
+.center span{font-size:15px;font-weight:600;letter-spacing:.16em}
+
+.node{
+  position:absolute;
+  width:220px;
+  min-height:125px;
+  padding:18px 20px;
+  border:1px solid rgba(255,255,255,.13);
+  background:rgba(8,8,8,.94);
+  cursor:pointer;
+  transition:.2s ease;
+  z-index:3;
+}
+.node:hover{border-color:#aaa;transform:translateY(-3px)}
+.node .num{font-size:9px;color:#555;letter-spacing:.16em;margin-bottom:9px}
+.node h2{font-size:14px;margin:0 0 7px;font-weight:500}
+.node p{font-size:10px;color:#777;margin:0;line-height:1.5}
+
+/* Eight nodes arranged around the center */
+.n1{left:7%;top:10%}
+.n2{left:calc(50% - 110px);top:6%}
+.n3{right:7%;top:10%}
+.n4{left:7%;top:39%}
+.n5{right:7%;top:39%}
+.n6{left:18%;bottom:8%}
+.n7{left:calc(50% - 110px);bottom:6%}
+.n8{right:18%;bottom:8%}
+
+@media(max-width:900px){
+  .header{display:block}
+  .subtitle{margin-top:20px}
+  .map{
+    height:auto;
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    overflow:visible;
+  }
+  .center{
+    position:relative;
+    left:auto;top:auto;
+    transform:none;
+    width:120px;height:120px;
+    margin:5px auto 20px;
+    flex-shrink:0;
+  }
+  .node{
+    position:relative!important;
+    left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;
+    width:100%;
+    min-height:0;
+    transform:none!important;
+  }
+  .map svg{display:none}
+}
+
+@media(max-width:600px){
+  nav{padding:0 5vw}
+  .nav-links a:nth-child(n+3){display:none}
+  main{padding:40px 5vw 60px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">JEP / LEGAL</div>
+  <div class="nav-links">
+    <a href="index.html">HOME</a>
+    <a href="mindmap.html">MIND MAP</a>
+    <a href="#">NOTES</a>
+    <a href="#">RESEARCH</a>
+  </div>
+</nav>
+
+<main>
+  <section class="header">
+    <div>
+      <div class="eyebrow">knowledge structure · 01</div>
+      <h1>Mind Map.</h1>
+    </div>
+    <p class="subtitle">
+      The starting structure of my legal knowledge.
+      Each section can grow into its own network of concepts,
+      rules, cases, notes, and research.
+    </p>
+  </section>
+
+  <section class="map" id="map">
+    <svg id="connections" aria-hidden="true"></svg>
+
+    <div class="center" id="center">
+      <span>HUKUM</span>
+    </div>
+
+    <div class="node n1" data-node="01" onclick="window.location.href='dasar-ilmu-hukum.html'">
+      <div class="num">01</div>
+      <h2>Dasar Ilmu Hukum</h2>
+      <p>Asas, norma, subjek, objek, sumber, tujuan, fungsi, dan konsep dasar hukum.</p>
+    </div>
+
+    <div class="node n2" data-node="02" onclick="window.location.href='sistem-pembagian.html'">
+      <div class="num">02</div>
+      <h2>Sistem &amp; Pembagian</h2>
+      <p>Publik, privat, materiil, formil, nasional, internasional, dan klasifikasi lainnya.</p>
+    </div>
+
+    <div class="node n3" data-node="03" onclick="window.location.href='cabang-hukum.html'">
+      <div class="num">03</div>
+      <h2>Cabang Hukum</h2>
+      <p>Keperdataan, business, contract, property, pidana, pidana khusus, HTN, dan kategori lainnya.</p>
+    </div>
+
+    <div class="node n4" data-node="04" onclick="openNode('Peraturan Perundang-undangan')">
+      <div class="num">04</div>
+      <h2>Peraturan</h2>
+      <p>UUD, UU, PP, Perpres, Permen, POJK, peraturan lembaga, dan struktur norma.</p>
+    </div>
+
+    <div class="node n5" data-node="05" onclick="openNode('Yurisprudensi')">
+      <div class="num">05</div>
+      <h2>Yurisprudensi</h2>
+      <p>Putusan pengadilan, ratio decidendi, pertimbangan hakim, dan analisis kasus.</p>
+    </div>
+
+    <div class="node n6" data-node="06" onclick="openNode('Doktrin')">
+      <div class="num">06</div>
+      <h2>Doktrin</h2>
+      <p>Pendapat ahli, teori hukum, buku, jurnal, dan pemikiran akademik.</p>
+    </div>
+
+    <div class="node n7" data-node="07" onclick="openNode('Legal Research')">
+      <div class="num">07</div>
+      <h2>Legal Research</h2>
+      <p>Riset isu hukum, legal issue, sumber, analisis, argumentasi, dan hasil penelitian.</p>
+    </div>
+
+    <div class="node n8" data-node="08" onclick="openNode('Legal Drafting')">
+      <div class="num">08</div>
+      <h2>Legal Drafting</h2>
+      <p>Kontrak, legal memo, legal opinion, NDA, SPA, surat, dan dokumen hukum lainnya.</p>
+    </div>
+  </section>
+</main>
+
+<script>
+function drawConnections(){
+  const map = document.getElementById('map');
+  const svg = document.getElementById('connections');
+  const center = document.getElementById('center');
+  const mapRect = map.getBoundingClientRect();
+  const centerRect = center.getBoundingClientRect();
+
+  svg.innerHTML = '';
+
+  const cx = centerRect.left + centerRect.width / 2 - mapRect.left;
+  const cy = centerRect.top + centerRect.height / 2 - mapRect.top;
+
+  document.querySelectorAll('.node').forEach(node => {
+    const r = node.getBoundingClientRect();
+    const nx = r.left + r.width / 2 - mapRect.left;
+    const ny = r.top + r.height / 2 - mapRect.top;
+
+    const dx = nx - cx;
+    const dy = ny - cy;
+    const distance = Math.sqrt(dx*dx + dy*dy);
+
+    const startRatio = (centerRect.width / 2) / distance;
+    const endRatio = Math.min((Math.min(r.width,r.height) / 2) / distance, .35);
+
+    const x1 = cx + dx * startRatio;
+    const y1 = cy + dy * startRatio;
+    const x2 = nx - dx * endRatio;
+    const y2 = ny - dy * endRatio;
+
+    const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+    line.setAttribute('x1',x1);
+    line.setAttribute('y1',y1);
+    line.setAttribute('x2',x2);
+    line.setAttribute('y2',y2);
+    svg.appendChild(line);
+  });
+}
+
+function openNode(name){
+  alert(name + "\\n\\nThis section is ready to be expanded.");
+}
+
+window.addEventListener('load', drawConnections);
+window.addEventListener('resize', drawConnections);
+</script>
+
+</body>
+</html>
